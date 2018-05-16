@@ -13,7 +13,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
 			};
 		}
 
-		componentDidMount() {
+		componentWillMount() {
+			console.log('yellow');
 			axios.interceptors.response.use((request) => {
 				this.setState({
 					error: null,
